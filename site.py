@@ -14,9 +14,9 @@ def homepage():
 # Location
 def location():
     st.title("Location")
-    st.write("The wedding will take place at a beautiful venue.")
-    st.write("Address: 123 Wedding Lane, City, Country")
-    st.map(location=["123 Wedding Lane, City, Country"])
+    st.write("The wedding will take place at Ristorante alla Madonnina di Barni.")
+    st.write("ia alla Madonnina, 22030, Barni, Italy")
+    st.map(location=["ia alla Madonnina, 22030, Barni, Italy"])
 
 # RSVP
 def rsvp():
