@@ -14,14 +14,13 @@ def homepage():
 # Location
 def location():
     st.title("Location")
-    st.write("The wedding will take place at Ristorante alla Madonnina di Barni.")
-    st.write("Via alla Madonnina, 22030, Barni, Italy")
-    st.map(location=["ia alla Madonnina, 22030, Barni, Italy"])
+    st.write("The wedding will take place at Ristorante alla Madonnina di Barni, at Via alla Madonnina, 22030, Barni, Italy")
+    # st.map(location=["ia alla Madonnina, 22030, Barni, Italy"])
 
     # Embedded Google Maps map
     map_url = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13376.58358882849!2d9.279663353971735!3d45.903857368447824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47842494b52cf5ed%3A0xefa8dd191f0d6360!2sYour%20Wedding%20Location!5e0!3m2!1sen!2sus!4v1568286161380!5m2!1sen!2sus"
-    map_html = f'<iframe width="100%" height="450" frameborder="0" style="border:0" src="{map_url}" allowfullscreen></iframe>'
-    # st.markdown(f'<iframe width="600" height="400" frameborder="0" style="border:0" src="{map_url}" allowfullscreen></iframe>', unsafe_allow_html=True)
+    # map_html = f'<iframe width="100%" height="450" frameborder="0" style="border:0" src="{map_url}" allowfullscreen></iframe>'
+    st.markdown(f'<iframe width="600" height="400" frameborder="0" style="border:0" src="{map_url}" allowfullscreen></iframe>', unsafe_allow_html=True)
 
 # RSVP
 def rsvp():
