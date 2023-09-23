@@ -12,6 +12,10 @@ def navigation_menu():
 def homepage():
     st.title("Welcome to Valentina and Luca's Wedding Website")
     st.write("We are excited to celebrate this special day with you!")
+    # Header image
+    header_image = st.file_uploader("lucaevale.jpg", type=["jpg", "png"])
+    if header_image:
+        st.image(header_image, caption="Valentina and Luca", use_column_width=True)
 
 # Location
 def location():
