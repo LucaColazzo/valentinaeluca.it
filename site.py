@@ -13,10 +13,9 @@ def homepage():
     st.title("Welcome to Valentina and Luca's Wedding Website")
     st.write("We are excited to celebrate this special day with you!")
     # Header image
-    header_image = IMG_4034.jpeg
-    if header_image:
-        st.image(header_image, caption="Valentina and Luca", use_column_width=True)
-
+    image = Image.open('IMG_4034.jpeg')
+    st.image(image, caption='The Yes moment!')
+    
 # Location
 def location():
     st.title("Location")
