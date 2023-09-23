@@ -49,7 +49,7 @@ def rsvp():
         email = st.text_input("Your Email:")
         phone = st.text_input("Phone Number:")
         allergies = st.text_area("Do you have any allergies? (if any):")
-        menu_type = st.selectbox("Do you have any restictions?, ("No","Vegetarian","Vegan","No fish","No meat"))
+        menu_type = st.selectbox("Do you have any restictions?", ("No","Vegetarian","Vegan","No fish","No meat"))
 
         submit_button = st.form_submit_button("Submit RSVP")
 
