@@ -1,0 +1,40 @@
+/* Add styling to the RSVP form elements */
+#rsvp-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#rsvp-form h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#rsvp-form label {
+    font-weight: bold;
+}
+
+#rsvp-form .form-group {
+    margin-bottom: 15px;
+}
+
+#rsvp-form input[type="text"], #rsvp-form input[type="email"], #rsvp-form input[type="tel"], #rsvp-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#rsvp-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#rsvp-form button:hover {
+    background-color: #45a049;
+}
