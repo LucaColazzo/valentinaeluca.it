@@ -36,37 +36,37 @@ def rsvp():
 #    st.write(f"Attending: {attending}")
 
 # Define the CSV file path
-csv_file_path = "data/rsvp_data.csv"
+    csv_file_path = "data/rsvp_data.csv"
 
-# Create a function to display and handle the RSVP form
-@st.experimental_memo
-def render_rsvp():
-    st.title("RSVP")
-    st.write("Please RSVP by filling out the form below:")
+    # Create a function to display and handle the RSVP form
+    @st.experimental_memo
+    def render_rsvp():
+        st.title("RSVP")
+        st.write("Please RSVP by filling out the form below:")
 
-    # Create the form for RSVP
-    with st.form(key="rsvp-form"):
-        name = st.text_input("Your Name:")
-        num_guests = st.number_input("Number of Guests (including yourself):", min_value=1, step=1)
-        email = st.text_input("Your Email:")
-        phone = st.text_input("Phone Number:")
-        note = st.text_area("Additional Notes (if any):")
+        # Create the form for RSVP
+        with st.form(key="rsvp-form"):
+            name = st.text_input("Your Name:")
+            num_guests = st.number_input("Number of Guests (including yourself):", min_value=1, step=1)
+            email = st.text_input("Your Email:")
+            phone = st.text_input("Phone Number:")
+            note = st.text_area("Additional Notes (if any):")
 
-        submit_button = st.form_submit_button("Submit RSVP")
+            submit_button = st.form_submit_button("Submit RSVP")
 
-    # Handle form submission
-    if submit_button:
-        # Check if the CSV file exists, and create it if not
-        if not os.path.exists(csv_file_path):
-            with open(csv_file_path, "w") as file:
-                file.write("Name,Number of Guests,Email,Phone,Note\n")
+        # Handle form submission
+        if submit_button:
+            # Check if the CSV file exists, and create it if not
+            if not os.path.exists(csv_file_path):
+                with open(csv_file_path, "w") as file:
+                    file.write("Name,Number of Guests,Email,Phone,Note\n")
 
-        # Append the RSVP data to the CSV file
-        with open(csv_file_path, "a") as file:
-            file.write(f"{name},{num_guests},{email},{phone},{note}\n")
+            # Append the RSVP data to the CSV file
+            with open(csv_file_path, "a") as file:
+                file.write(f"{name},{num_guests},{email},{phone},{note}\n")
 
-        # Display a confirmation message
-        st.success("Thank you for your RSVP! We look forward to seeing you at the wedding.")
+            # Display a confirmation message
+            st.success("Thank you for your RSVP! We look forward to seeing you at the wedding.")
     
 # Main function to run the app
 def main():
