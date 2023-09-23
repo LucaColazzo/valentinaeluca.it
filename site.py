@@ -48,7 +48,8 @@ def rsvp():
         num_guests = st.number_input("Number of Guests (including yourself):", min_value=1, step=1)
         email = st.text_input("Your Email:")
         phone = st.text_input("Phone Number:")
-        note = st.text_area("Additional Notes (if any):")
+        allergies = st.text_area("Do you have any allergies? (if any):")
+        menu_type = st.selectbox("Do you have any restictions?, ("No","Vegetarian","Vegan","No fish","No meat")
 
         submit_button = st.form_submit_button("Submit RSVP")
 
@@ -57,11 +58,11 @@ def rsvp():
         # Check if the CSV file exists, and create it if not
         if not os.path.exists(csv_file_path):
             with open(csv_file_path, "w") as file:
-                file.write("Name,Number of Guests,Email,Phone,Note\n")
+                file.write("Name,Number of Guests,Email,Phone,Allergies,MenuType\n")
 
      # Append the RSVP data to the CSV fill
         with open(csv_file_path, "a") as file:
-            file.write(f"{name},{num_guests},{email},{phone},{note}\n")
+            file.write(f"{name},{num_guests},{email},{phone},{allergies},{menu_type}\n")
 
     # Display a confirmation message
         st.success("Thank you for your RSVP! We look forward to seeing you at the wedding.")
